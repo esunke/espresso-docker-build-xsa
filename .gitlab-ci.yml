@@ -1,0 +1,10 @@
+variables:
+  GIT_SSL_NO_VERIFY: "true"
+
+build-master:
+  image: docker:latest
+  stage: build
+  script:
+    - docker build  -t xsa_build:latest docker
+  tags:
+    - shell
